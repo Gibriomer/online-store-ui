@@ -1,0 +1,38 @@
+@import './node_modules/bootstrap/scss/bootstrap';
+@import './Header.scss';
+
+$themeblue: #3636ee;
+
+body {
+  background-image: url(assets/beach_3.jpg);
+  background-repeat: no-repeat;
+}
+
+.container {
+  display: flex;
+  justify-content: flex-end;
+  border-radius: 10px;
+  color: #fff;
+  width: 200px;
+}
+
+.form-control {
+  opacity: 0.5;
+  transition: all 0.2s linear;
+
+  &:hover {
+    opacity: 1;
+    transition: all 0.2s linear;
+
+  }
+}
+
+.form-group {
+  width: 250px;
+}
+
+.btn {
+    margin: 20px 0;
+  }
+  
+  

@@ -1,0 +1,13 @@
+@import './node_modules/bootstrap/scss/bootstrap';
+@import './Register.scss';
+@import './Header.scss';
+@import './Login.scss';
+
+
+body {
+  font-family: 'Roboto Mono', monospace;
+}
+
+.container {
+  flex-direction: initial;
+}
