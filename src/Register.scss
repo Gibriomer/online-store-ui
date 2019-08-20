@@ -1,16 +1,12 @@
 @import './node_modules/bootstrap/scss/bootstrap';
 @import './Header.scss';
 
-$themeblue: #3636ee;
 
-body {
-  background-image: url(assets/beach_3.jpg);
-  background-repeat: no-repeat;
-}
+
 
 .container {
   display: flex;
-  justify-content: flex-end;
+  justify-content: center;
   border-radius: 10px;
   color: #fff;
   width: 200px;
@@ -28,11 +24,14 @@ body {
 }
 
 .form-group {
-  width: 250px;
+  width: 300px;
 }
 
 .btn {
     margin: 20px 0;
   }
   
+  h2 {
+    padding-bottom: 40px;
+  }
   

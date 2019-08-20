@@ -12,6 +12,7 @@ export default yup.object().shape({
         .required()
         .positive()
         .integer()
-        .min(18),
+        .min(18)
+        .max(100),
     email: yup.string().email()
 })

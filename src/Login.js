@@ -8,38 +8,45 @@ export class Login extends Component {
     }
 
     send(values) {
-        fetch('http://localhost:4000/api/user', {
-            method: 'GET',
+        fetch('http://localhost:4000/api/user/login', {
+            method: 'POST',
             body: JSON.stringify(values),
             headers: {
                 'Content-Type': 'application/json'
             }
-        });
+        })
+            .then(response => response.json())
+            .then(response => {
+                document.cookie = "user=" + response.token;
+            })
+            .catch(err => console.log(err));
     }
 
     render() {
         return (
-            <div>
-                <h2>Login</h2>
-                <Formik 
-                    onSubmit={this.send.bind(this)}
-                    initialValues={{email: '', password: ''}}
-                    validationSchema={User}>
-                    <Form>
-                        <div className="form-group">
-                            E-mail: <Field type="text" name="email" className="form-control" />
-                            <ErrorMessage name="email" component="div" className="alert alert-danger" />
-                        </div>
-                        <div className="form-group">
-                            Password: <Field type="text" name="password" className="form-control" />
-                            <ErrorMessage name="name" component="div" className="alert alert-danger"/>
-                        </div>
-                        <div>
-                            <input className='btn btn-success' type="submit" value="Login" />
-                        </div>
-                    </Form>
-                </Formik>
-            </div>
+            <div className="container"> 
+                <div>
+                    <h2>Login</h2>
+                    <Formik 
+                        onSubmit={this.send.bind(this)}
+                        initialValues={{email: '', password: ''}}>
+                        
+                        <Form>
+                            <div className="form-group">
+                                E-mail <Field type="text" name="email" className="form-control" />
+                                <ErrorMessage name="email" component="div" className="alert alert-danger" />
+                            </div>
+                            <div className="form-group">
+                                Password <Field type="text" name="password" className="form-control" />
+                                <ErrorMessage name="name" component="div" className="alert alert-danger"/>
+                            </div>
+                            <div>
+                                <input className='btn btn-success' type="submit" value="Login" />
+                            </div>
+                        </Form>
+                    </Formik>
+                </div>
+            </div>   
         )
     }
 }
