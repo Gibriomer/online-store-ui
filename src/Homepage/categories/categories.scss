@@ -1,0 +1,42 @@
+@import './node_modules/bootstrap/scss/bootstrap';
+@import '../../var.scss';
+
+.container-categories{
+    position: sticky;
+    display: flex;
+    justify-content: flex-end;
+    align-items: space-between;
+}
+
+
+.categories {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.category {
+    justify-content: flex-start;
+    margin-top: 15px;
+    padding: 10px;
+    font-size: 1.4em;
+    color: $themeText;
+
+    &:hover {
+        background: $themeText;
+        text-decoration: none;
+        color: #fff;
+        transition: all 0.3s linear;
+        border-radius: 10px;
+    }
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+
+    
+}
+
+
+

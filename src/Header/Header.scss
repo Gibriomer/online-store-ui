@@ -1,0 +1,71 @@
+@import './node_modules/bootstrap/scss/bootstrap';
+@import '../var.scss';
+
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: $themeBackground;
+    margin-bottom: 20px;
+    height: 80px;
+    padding: 0 10%;
+
+    .btn-outline-light {
+        color: $themeText;
+        border: none;
+
+            &:focus {
+                border: 1px solid transparent;
+            }
+
+            &:hover {
+                color: $themeText;
+                background: $themeBackground;
+            }
+    }
+
+    .head-line {
+        font-size: 1.4em;
+        color: $themeText;
+        display: inline-block;
+        margin: 0 20px;
+        border: none;
+
+            &:hover {
+                color: $themeText;
+                background: $themeBackground;
+            }
+    }
+
+    ul {
+        align-items: flex-end;
+        list-style: none;
+        display: inline-block;
+        
+        li {
+            display: inline-block;
+            margin: 5px;
+            text-decoration: none;
+
+            .drop-cart {
+                background: $themeBackground;
+            }
+        }
+    }
+
+    .dropdown-dark {
+        background: $themeBackground;
+        border: none;
+        border-radius: 0 15px 15px 15px;
+
+        &:hover {
+            background: $themeBackground;
+        }
+
+    }
+}
+
+
+
+

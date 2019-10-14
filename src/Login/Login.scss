@@ -1,0 +1,33 @@
+@import './node_modules/bootstrap/scss/bootstrap';
+@import '../var.scss';
+
+.container {
+    display: flex;
+    justify-content: center;
+
+    .container-register {
+        padding: 40px;
+        border-radius: 10px;
+        background: $themeBackground;
+        color: #fff;
+        margin-top: 8%;
+
+        h2 {
+            color: $themeText;
+        }
+
+        .form-group {
+            margin-top: 25px;
+        }
+
+        .btn-success {
+            margin: 25px 0;
+        }
+
+        .btn-register {
+            background: $themeBackground;
+            color: $themeText;
+            border: none;
+        }
+    }
+}

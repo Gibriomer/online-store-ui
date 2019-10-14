@@ -1,0 +1,38 @@
+@import './node_modules/bootstrap/scss/bootstrap';
+@import '../var.scss';
+
+
+.product {
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+    text-align: center;
+    color: $themeBackground;
+    margin: 20px;
+    border: 5px solid $themeText;
+    border-radius: 10px;
+    width: 180px;
+    
+}
+
+.products {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+
+.card-category {
+    font-size: 14px;
+    border-radius: 15px;
+    height: 240px;
+
+        .btn-product {
+            height: 30px;
+            width: 70px;
+            font-size: 14px;
+            margin-top: 5px;
+            position: absolute;
+            bottom: 10px;
+            left: 32px;
+        }
+}

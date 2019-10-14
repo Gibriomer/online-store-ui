@@ -1,0 +1,46 @@
+@import './node_modules/bootstrap/scss/bootstrap';
+@import '../../var.scss';
+
+.potw {
+    margin: 20px 0;
+    border: none;
+
+    .card {
+        border: 0px solid #fff;
+        
+        .card-header {
+            background: $themeText;
+        }
+    }
+
+    .card-container {
+        padding: 15px;
+        background: $themeBackground;
+        color: #fff;
+
+        
+
+        .before-price {
+            text-decoration: line-through;
+        }
+
+        .card-title {
+            font-size: 1.4em;
+            text-decoration: underline;
+        }
+
+        .card-body {
+            background: $themeBackground;
+        }
+
+        .btn-success {
+            margin-top: 20px;
+        }
+    }
+
+    
+}
+
+.new-product {
+    @extend .potw ;
+}

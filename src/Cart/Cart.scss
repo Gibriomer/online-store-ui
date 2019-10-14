@@ -1,0 +1,11 @@
+@import './node_modules/bootstrap/scss/bootstrap';
+@import '../var.scss';
+
+.cart {
+    border: 2px solid $themeText;
+    border-radius: 15px;
+}
+
+.btn-trash {
+    border-radius: 10px;
+}

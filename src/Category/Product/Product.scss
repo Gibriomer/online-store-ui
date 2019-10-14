@@ -1,0 +1,28 @@
+@import './node_modules/bootstrap/scss/bootstrap';
+@import '../../var.scss';
+
+.container {
+    display: flex;
+    flex-direction: row;
+}
+
+.card.card-product {
+    background: $themeBackground;
+    transform: scale(1, 1.4);
+    margin-top: 130px;
+
+}
+
+.card-product {
+    padding: 15px;
+    color: #fff;
+
+    .card-header {
+        background: $themeText;
+        color: $themeBackground
+    }
+
+    img {
+        height: 20rem;
+    }
+}

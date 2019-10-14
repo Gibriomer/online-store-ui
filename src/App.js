@@ -1,12 +1,43 @@
 import React from 'react';
+import { BrowserRouter as Router, Route } from "react-router-dom";
+
+import Register from "./Register/Register";
+import Login from "./Login/Login";
+import Homepage from "./Homepage/Homepage";
+import Header from "./Header/Header";
+import Profile from "./Profile/Profile";
+import Product from './Category/Product/Product';
+import Cart from './Cart/Cart';
+import Admin from './Admin/Admin';
+import Categories from './Homepage/categories/Categories';
+import Payment from './Cart/Payment/Payment';
 
 import './App.scss';
-import Header from './Header';
 
-function App() {
-  return (
-     <Header />
-  );
+
+class App extends React.Component {
+  render() {
+    return (
+      <Router>
+        <div className="App">
+          <Header />
+          <div className="categories-side-bar">
+            <Categories />
+
+            <Route path="/" exact component={Homepage} />
+            <Route path="/cart" component={Cart} />
+            <Route path="/cart/payment" exact component={Payment} />
+            <Route path="/login" component={Login} />
+            <Route path="/register" component={Register} />
+            <Route path="/profile" component={Profile} />
+            <Route path="/category/:categoryId/product/:id" component={Product} />
+
+            <Route path="/admin" component={Admin} />
+          </div>
+        </div>
+      </Router>
+    );
+  }
 }
 
 export default App;

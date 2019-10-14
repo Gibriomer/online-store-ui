@@ -1,12 +1,22 @@
 @import './node_modules/bootstrap/scss/bootstrap';
-@import './Register.scss';
-@import './Header.scss';
-@import './Login.scss';
+@import './var.scss';
 
-
-body {
-  font-family: 'Offside', cursive;
-  background: #8090ec;
+html, body {
+  height: 100%;
+  margin: 0;
 }
+
+.App {
+  font-family: 'Offside', cursive;
+  height: 200vh;
+  width: 100vw;
+  background: #3f3f3f;
+}
+
+.categories-side-bar {
+  display: flex;
+  padding: 0 12%;
+}
+
 
 
