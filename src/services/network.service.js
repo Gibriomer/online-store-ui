@@ -1,6 +1,7 @@
 import cookie from 'react-cookies';
+import config from '../environment/index';
 
-const baseUrl = 'http://localhost:4000/api'
+const baseUrl = config.url + config.api;
 
 export default class Network {
 

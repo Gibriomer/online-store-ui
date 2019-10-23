@@ -1,5 +1,5 @@
 import React from 'react';
-// import Categories from './categories/Categories';
+import Categories from './categories/Categories';
 import Potw from './Potw/Potw';
 import NewProduct from './NewProduct/NewProduct';
 
@@ -19,7 +19,6 @@ class Homepage extends React.Component {
 					<Potw />
 					<NewProduct />
 				</div>
-
 			</div>
 		);
 	}

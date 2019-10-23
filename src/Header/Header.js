@@ -8,20 +8,25 @@ import Cart from '../Cart/Cart';
 import login from '../images/login.png';
 import signUp from '../images/sign-up.png';
 import profile from '../images/profile.png';
+import cookie from 'react-cookies';
 
 
 
 class Header extends Component {
 
-    // constructor(props) {
-    //     super(props);
-    // }
+    constructor(props) {
+        super(props);
+    }
+
+    logout() {
+        cookie.remove('user');
+    }
 
     render() {
         return (
             <div className="sticky-top">
                 <header className="header">
-                    <Link to="/" className="btn btn-outline-light head-line">SALL-IN cheap</Link>
+                    <Link to="/" className="btn btn-outline-light head-line">ALL-IN cheap</Link>
                     <ul>
                         <li>
                             <Dropdown as={ButtonGroup} drop="left" className="btn btn-outline-light">
@@ -47,6 +52,9 @@ class Header extends Component {
                             <Link to="/Profile" className="btn btn-outline-light">
                                 <img src={profile} alt="#" />
                             </Link>
+                        </li>
+                        <li>
+                            <button onClick={this.logout.bind(this)}>Logout</button>
                         </li>
                     </ul>
                 </header>

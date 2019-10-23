@@ -3,7 +3,7 @@ import CategoryService from '../../services/category.service';
 import {BrowserRouter as Link, Route} from 'react-router-dom';
 import Category from '../../Category/Category';
 
-import './categories.scss'
+import './categories.scss';
 
 class Categories extends React.Component {
 

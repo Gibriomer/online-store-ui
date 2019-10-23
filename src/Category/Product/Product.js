@@ -1,7 +1,7 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
 import ProductService from '../../services/product.service';
-import CartService from '../../services/cart.service';
-
+import { connect } from 'react-redux';
+import {addToCart} from '../../redux/actions';
 
 import './Product.scss';
 
@@ -21,8 +21,8 @@ export class Product extends Component {
             .then(product => this.setState({ product }));
     }
 
-    addTOCart() {
-        CartService.add(this.state.product.id, 1)
+    addToCart() {
+        this.props.addToCart(this.state.product.id);
     }
 
     render() {
@@ -36,7 +36,7 @@ export class Product extends Component {
                         <p className="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
                         <p className="card-text">{this.state.product.price}$</p>
                         <button className="btn btn-success"
-                                onClick={this.addTOCart.bind(this)}>add to cart</button>
+                                onClick={this.addToCart.bind(this)}>add to cart</button>
                     </div>
                 </div>
             </div>
@@ -44,5 +44,7 @@ export class Product extends Component {
     }
 }
 
-export default Product
+export default connect(null, {
+    addToCart
+})(Product)
 

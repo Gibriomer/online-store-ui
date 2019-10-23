@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-// import { Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { Carousel } from 'react-bootstrap';
 
 import './NewProduct.scss';
@@ -9,7 +9,7 @@ export class NewProduct extends Component {
         return (
             <div className="products-carousel">
                 <h1>New products</h1>
-                <Carousel>
+                {/* <Carousel>
                     <Carousel.Item>
                         <img
                             className="d-block w-100 carousel-image"
@@ -46,23 +46,24 @@ export class NewProduct extends Component {
                         </Carousel.Caption>
                     </Carousel.Item>
                 </Carousel>
+            </div> */}
+
+
+                <div className="new-product">
+                    <div className="card">
+                        <h5 className="card-header">New products</h5>
+                        <div className="container card-container">
+                            <img src="https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcTOvJM5yMLbESlMraofYID_zbKJiayYUaBGGpt-ZAKbZRFJr5WOz8qDd4gIu0__ymHSoZdnVwqdfIFw6hTdF28OwkvaT4fp7RvyEdDTpSP-w1_694uTDd_Q&usqp=CAE" alt="..." />
+                            <div className="card-body">
+                                <div className="card-title">Eclipse chips</div>
+                                <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                <div className="price">22$$</div>
+                                <Link to="/product/:id" className="btn btn-success">buy now</Link>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-
-
-            // <div className="new-product">
-            //     <div className="card">
-            //         <h5 className="card-header">New products</h5>
-            //         <div className="container card-container">
-            //         <img src="https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcTOvJM5yMLbESlMraofYID_zbKJiayYUaBGGpt-ZAKbZRFJr5WOz8qDd4gIu0__ymHSoZdnVwqdfIFw6hTdF28OwkvaT4fp7RvyEdDTpSP-w1_694uTDd_Q&usqp=CAE" alt="..." />
-            //             <div className="card-body">
-            //                 <div className="card-title">Eclipse chips</div>
-            //                 <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-            //                 <div className="price">22$$</div>
-            //                 <Link to="/product/:id" className="btn btn-success">buy now</Link>
-            //             </div>
-            //         </div>
-            //     </div>
-            // </div>
         )
     }
 }
