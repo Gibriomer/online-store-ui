@@ -8,14 +8,15 @@ html, body {
 
 .App {
   font-family: 'Offside', cursive;
-  height: 200vh;
+  height: 400vh;
   width: 100vw;
   background: #3f3f3f;
 }
 
-.categories-side-bar {
+.App-body {
   display: flex;
-  padding: 0 12%;
+  justify-content: space-evenly;
+  margin: 0 8vw;
 }
 
 

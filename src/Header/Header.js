@@ -29,8 +29,8 @@ class Header extends Component {
                     <Link to="/" className="btn btn-outline-light head-line">ALL-IN cheap</Link>
                     <ul>
                         <li>
-                            <Dropdown as={ButtonGroup} drop="left" className="btn btn-outline-light">
-                                <Dropdown.Toggle className="dropdown-dark btn btn-outline-light">
+                            <Dropdown as={ButtonGroup} drop="left" className="btn btn-outline-light cart-button">
+                                <Dropdown.Toggle className="dropdown-dark ">
                                     <div><CartBut /></div>
                                 </Dropdown.Toggle>
                                 <Dropdown.Menu className="btn btn-outline-light dropdown-dark">

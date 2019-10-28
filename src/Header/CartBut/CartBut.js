@@ -10,7 +10,7 @@ export class CartBut extends Component {
         return (
             <div>
                 <img src={cart} alt="#" />
-                <span className="badge badge-success">
+                <span className="badge badge-dark">
                     {this.props.ItemsCount}
                 </span>
             </div>

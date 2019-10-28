@@ -1,20 +1,20 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
-import Register from "./Register/Register";
-import Login from "./Login/Login";
-import Homepage from "./Homepage/Homepage";
-import Header from "./Header/Header";
-import Profile from "./Profile/Profile";
-import Product from './Category/Product/Product';
-import Cart from './Cart/Cart';
 import Admin from './Admin/Admin';
+import Cart from './Cart/Cart';
 import Categories from './Homepage/categories/Categories';
-import NoMatch from './NoMatch/NoMatch'
+import Category from './Category/Category';
+import Header from "./Header/Header";
+import Homepage from "./Homepage/Homepage";
+import Login from "./Login/Login";
+import NoMatch from './NoMatch/NoMatch';
 import Payment from './Cart/Payment/Payment';
+import Product from './Category/Product/Product';
+import Profile from "./Profile/Profile";
+import Register from "./Register/Register";
 
 import './App.scss';
-import Category from './Category/Category';
 
 
 class App extends React.Component {
@@ -23,9 +23,11 @@ class App extends React.Component {
       <Router>
         <div className="App">
           <Header />
-          <div className="categories-side-bar">
-            <Categories />
-            <Switch>
+          <div className="container App-body">
+            <div className="side-bar">
+              <Categories />
+            </div>
+            <Switch className="content">
               <Route path="/" exact component={Homepage} />
               <Route path="/cart" component={Cart} />
               <Route path="/cart/payment" exact component={Payment} />

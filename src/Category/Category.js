@@ -33,9 +33,8 @@ export class Category extends Component {
                                 <div className="card-body">
                                     <div className="card-title">{product.title}</div>
                                     <div className="price">{product.price}$</div>
-                                    <Link to={`/category/${this.categoryId}/product/${product.id}`}
-                                        className="product btn btn-success btn-product"
-                                        key={index}>buy now</Link>
+                                    <Link to={`/category/${this.categoryId}/product/${product.id}`} key={index}>
+                                        <button className="btn btn-success btn-product">buy</button></Link>
                                 </div>
                             </div>
                         </Link>;

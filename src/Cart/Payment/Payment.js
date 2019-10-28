@@ -1,44 +1,31 @@
 import React, { Component } from 'react'
-import Cards from 'react-credit-cards';
+import { Formik, Form, Field, ErrorMessage } from 'formik';
 
 export class Payment extends Component {
-    state = {
-        cvc: '',
-        expiry: '',
-        focus: '',
-        name: '',
-        number: '',
-    };
-
-    handleInputFocus = (e) => {
-        this.setState({ focus: e.target.name });
-    }
-
-    handleInputChange = (e) => {
-        const { name, value } = e.target;
-
-        this.setState({ [name]: value });
-    }
 
     render() {
         return (
-            <div id="PaymentForm">
-                <Cards
-                    cvc={this.state.cvc}
-                    expiry={this.state.expiry}
-                    focus={this.state.focus}
-                    name={this.state.name}
-                    number={this.state.number}
-                />
-                <form>
-                    <input
-                        type="tel"
-                        name="number"
-                        placeholder="Card Number"
-                        onChange={this.handleInputChange}
-                        onFocus={this.handleInputFocus}
-                    />
-            </form>
+            <div>
+                <Formik
+                    initialValues={{ cardNum: '', expoDate: '', cvc: '' }}>
+                    <Form>
+                        <div className="form-group">
+                            <Field type="number" name="cardNum" className="form-control" placeholder="Card number here" />
+                            <ErrorMessage name="cardNum" component="div" className="alert alert-danger" />
+                        </div>
+                        <div className="form-group">
+                            <Field type="date" name="expoDate" className="form-control" placeholder="Expiration date" />
+                            <ErrorMessage name="expoDate" component="div" className="alert alert-danger" />
+                        </div>
+                        <div className="form-group">
+                            <Field type="number" name="cvc" className="form-control" placeholder="CVC" />
+                            <ErrorMessage name="cvc" component="div" className="alert alert-danger" />
+                        </div>
+                        <div>
+                            <input className='btn btn-success' type="submit" value="Pay" />
+                        </div>
+                    </Form>
+                </Formik>
             </div>
         );
     }

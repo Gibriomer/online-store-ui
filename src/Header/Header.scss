@@ -8,8 +8,8 @@
     align-items: center;
     background: $themeBackground;
     margin-bottom: 20px;
-    height: 80px;
-    padding: 0 10%;
+    height: 60px;
+    padding: 0 3vw;
 
     .btn-outline-light {
         color: $themeText;
@@ -25,6 +25,11 @@
             }
     }
 
+    .cart-button {
+        padding: 0;
+        margin: 0;
+    }
+
     .head-line {
         font-size: 1.4em;
         color: $themeText;
@@ -36,6 +41,13 @@
                 color: $themeText;
                 background: $themeBackground;
             }
+    }
+
+    .dropdown-dark {
+        margin: 0;
+        padding: 0;
+        border-radius: 15px;
+        background: transparent;
     }
 
     ul {

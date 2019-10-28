@@ -1,7 +1,9 @@
 import React, { Component } from 'react'
 import CartService from '../services/cart.service';
 import ProductService from '../services/product.service'
-import { Link } from "react-router-dom";
+import { Switch, Route, Link } from "react-router-dom";
+import Payment from './Payment/Payment';
+
 
 import waste from '../images/waste.png';
 import claerCart from '../images/claer_cart.png';
@@ -83,7 +85,7 @@ export class Cart extends Component {
                                 <td>${(product.price * product.qty).toFixed(2)}</td>
                                 <td>
                                     <button className="btn btn-danger btn-trash" onClick={this.remove.bind(this, product.id)}>
-                                        <img src={waste} alt="#"/>
+                                        <img src={waste} alt="#" />
                                     </button>
                                 </td>
                             </tr>
@@ -98,13 +100,17 @@ export class Cart extends Component {
                             <td>total: ${this.calcTotal(this.state.products).toFixed(2)}</td>
                             <td>
                                 <button className="btn btn-dark btn-trash" onClick={this.clearAll.bind(this)}>
-                                    <img src={claerCart} alt="#"/>
+                                    <img src={claerCart} alt="#" />
                                 </button>
                             </td>
 
                         </tr>
                     </tfoot>
                 </table>
+                <div>
+                    <Route path="/cart/payment" exact component={Payment} />
+                </div>
+
             </div>
         )
     }
