@@ -1,5 +1,5 @@
 import React from 'react';
-import Categories from './categories/Categories';
+import Categories from './Categories/Categories';
 import Potw from './Potw/Potw';
 import NewProduct from './NewProduct/NewProduct';
 

@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
 import Admin from './Admin/Admin';
 import Cart from './Cart/Cart';
-import Categories from './Homepage/categories/Categories';
+import Categories from './Homepage/Categories/Categories';
 import Category from './Category/Category';
 import Header from "./Header/Header";
 import Homepage from "./Homepage/Homepage";
